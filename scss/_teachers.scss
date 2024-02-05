@@ -12,10 +12,10 @@
 	@include flex-center();
 	align-items: start;
 	margin: 20px 0;
-	// @media (max-width:700px) {
+	// @media (max-width:500px) {
 	// 	max-width: 260px;
-	// 	overflow: hidden;
-	// 	position: relative;
+	// 	overflow-x: scroll;
+	// 	flex-wrap: nowrap;
 	// }
 }
 

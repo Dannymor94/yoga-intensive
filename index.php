@@ -35,6 +35,7 @@
 			include_once('php/tmp/program.php');
 			include_once('php/tmp/place.php');
 			include_once('php/tmp/teachers.php');
+			include_once('php/tmp/price.php');
 			include_once('php/tmp/celender.php');
 			include_once('php/tmp/footer.php');
 			?>
@@ -45,7 +46,7 @@
 		<script src="js/jquery371.js" ></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		
-		<script src="js/form-ajax.js" defer></script> 
+		<!-- <script src="js/form-ajax.js" defer></script>  -->
 		<script defer src="js/validation.js"></script>
 		<script src="js/mask_phone.js" type="text/javascript" ></script>
 		<script src="js/phone.js"></script>

@@ -58,3 +58,20 @@ function formShow() {
 	});
 }
 formShow();
+
+
+function priceShow (){
+	
+	const priceIcon = document.querySelector('.price__img-wrap');
+	const priceCart = document.querySelector('.price__cart');
+	priceCart.classList.add('hidden')
+	priceIcon.addEventListener('click',()=>{
+		priceCart.classList.remove('hidden');
+		priceIcon.classList.add('hidden');
+	});
+	priceCart.addEventListener('click',()=>{
+		priceCart.classList.add('hidden');
+		priceIcon.classList.remove('hidden');
+	})
+};
+priceShow ()

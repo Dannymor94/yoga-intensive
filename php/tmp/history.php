@@ -16,19 +16,22 @@
 		Задача интесивов перенести этот опыт в лаконичной форме и дать возможность каждому прикоснуться к атмосфере "йоговского образа жизни" и возможно остаться в ней на всю жизнь.
 		</p>
 	</div>
-	<div class="history__slider">
-		<div class="history__slider-line">
-			<?php 
-				require_once 'php/db.php';
-				$historyImg = mysqli_query($connect, "SELECT * FROM `img_history` ");
-				$historyImg = mysqli_fetch_all($historyImg);
-			?>
-			<?php foreach ($historyImg as $src_img){
-			?>
-			<img src="<?= $src_img[1]?>" alt="" class="history__img active-block slider-img"> 
-			<?php };?>
+	<div class=" history__slider slider-wrap ">
+		<div class="history__img-wrap slider-line">
+				<?php 
+					require_once 'php/db.php';
+					$historyImg = mysqli_query($connect, "SELECT * FROM `img_history` ");
+					$historyImg = mysqli_fetch_all($historyImg);
+				?>
+				<?php foreach ($historyImg as $src_img){
+				?>
+				<img src="<?= $src_img[1]?>" alt="" class="history__img"> 
+				<?php };?>
+				
 		</div>
-		<div class="history__slider-btn slider-btn-next slider-controll slide-next"> </div>
-		<div class="history__slider-btn slider-btn-prev slider-controll slider-prev"> </div>
+		<img class="history__icon-finger" src="img/icon/finger.gif" alt="finger">
+		<!-- <div class=" slider-btn-next slider-control"> </div>
+		<div class=" slider-btn-prev slider-control"> </div> -->
 	</div>
+	
 </section>

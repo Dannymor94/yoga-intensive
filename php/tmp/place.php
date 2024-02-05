@@ -14,7 +14,7 @@
 						<?=$data[1] ?>
 						<?php };?>
 					</p>
-					<div class="place__wrap-item">
+					<div class="place__wrap-item ">
 						<?php foreach ($place as $data){?>
 						<img src="<?=$data[2] ?>"class="place__img">
 						<?php };?>

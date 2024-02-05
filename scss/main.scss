@@ -118,6 +118,7 @@ h2 {
 @import 'place';
 @import 'teachers';
 @import 'calender';
+@import 'price';
 @import 'history';
 @import 'form';
 @import 'footer';
@@ -130,6 +131,6 @@ h2 {
 	display: block;
 }
 .hidden {
-	overflow: hidden !important;
+	display: none;
 }
 

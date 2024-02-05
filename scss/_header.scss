@@ -1,0 +1,229 @@
+.header {
+	background-color: #f2ce4d;
+	@include flex-center();
+	@include V100();
+	height: 100vh;
+	color: $color-text;
+	gap: 50px;
+	padding: 0;
+}
+.btn_phone {
+	@include btn();
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+	border-radius: 50%;
+	width: 75px;
+	height: 75px;
+	z-index: 9999;
+	box-shadow: 0px 0px 15px 5px rgba(4, 126, 121, 0.4);
+	animation: puls 2s ease-out infinite normal;
+	&:hover {
+		animation-play-state: paused;
+	}
+}
+.btn_phone__img {
+	position: absolute;
+	width: 70px;
+	top: 0;
+	left: 0;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+.nav {
+	position: fixed;
+	top: 15%;
+	left: 2%;
+	z-index: 99;
+	background-color: rgba(245, 128, 13, 0.3);
+	border-radius: 20px;
+	padding: 15px;
+	overflow: hidden;
+	display: none;
+}
+.nav__select-menu {
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	z-index: 99;
+	top: 2%;
+	left: 2%;
+	border-radius: 50%;
+	animation: round 12s linear infinite normal;
+	&:hover {
+		background-color: $orange;
+		cursor: pointer;
+	}
+}
+
+.nav__line {
+	width: 5px;
+	height: 100%;
+	background-color: $khaki;
+	position: absolute;
+	left: 10%;
+	transform: translate(-50%, 0);
+	z-index: -1;
+	box-shadow: 0px 0px 58px 5px rgba(207, 193, 175, 0.5);
+	.nav__progress {
+		width: 5px;
+		background: rgb(242, 206, 77);
+		box-shadow: 2px, 2px, 15px, 2px, #f2ce4d;
+		height: 0;
+	}
+}
+
+.nav__ul {
+	display: flex;
+	gap: 30px;
+	font-size: 15px;
+	color: #fff;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.nav__li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	z-index: 9;
+	background-color: $orange;
+	border-radius: 10px;
+	padding: 5px;
+	box-shadow: 0px 0px 20px 3px rgba(207, 193, 175, 0.5);
+	font-size: 20px;
+	font-weight: 500;
+	&:hover {
+		color: $orange;
+		background-color: $yellow;
+		transition: 0.2s;
+	}
+	.nav__icon {
+		width: 30px;
+		height: 30px;
+		animation: round 5s linear infinite normal;
+		border-radius: 50%;
+		background-color: $orange;
+		&:hover {
+			animation-play-state: paused;
+		}
+	}
+}
+
+.header__wrap-cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include flex-center();
+	height: 100vh;
+	width: 100vw;
+	z-index: 2;
+	background-color: rgb(225, 189, 58, 0.5);
+}
+.header__wrap-text {
+	margin-top: 50px;
+	@include flex-center();
+	flex-direction: column;
+	gap: 40px;
+	@media (max-width: 520px) {
+		gap: 30px;
+	}
+}
+.header__title {
+	font-size: 70px;
+	font-weight: 900;
+	text-align: center;
+	@media (max-width: 520px) {
+		font-size: 40px;
+	}
+}
+.header__subtitle {
+	@include subtitle();
+}
+.header__wrap-img {
+	position: relative;
+	margin: 10px;
+	z-index: 55;
+}
+.header__img {
+	min-width: 280px;
+	min-height: 280px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	animation: headerLane 40s linear infinite normal;
+
+	z-index: 999;
+}
+@keyframes headerLane {
+	0% {
+		background-image: url(../img/figure/1.png);
+	}
+	20% {
+		background-image: url(../img/figure/1.png);
+	}
+	21% {
+		background-image: url(../img/figure/2.png);
+	}
+	35% {
+		background-image: url(../img/figure/2.png);
+	}
+	36% {
+		background-image: url(../img/figure/4.png);
+	}
+	65% {
+		background-image: url(../img/figure/4.png);
+	}
+	66% {
+		background-image: url(../img/figure/6.png);
+	}
+	100% {
+		background-image: url(../img/figure/6.png);
+	}
+}
+.header__circle {
+	position: absolute;
+	top: 40%;
+	transform: translate(0, -50%);
+	right: -10%;
+	min-width: 300px;
+	min-height: 300px;
+	background-color: $orange;
+	border-radius: 50%;
+	box-shadow: 0px 0px 58px 25px rgba(207, 193, 175, 0.5);
+	z-index: -1;
+	// @media (max-width: 865px) {
+	// 	top: 80%;
+	// 	transform: translate(-90%, -50%);
+	// }
+}
+.header__btn {
+	@include btn();
+}
+
+.header__inner-bubbles {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	z-index: 0;
+	display: flex;
+	gap: 5px;
+}
+.header__bubble {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 5px 5px 15px 5px #fff;
+	animation: animBubbles 30s linear infinite;
+	animation-duration: calc(60s / var(--i));
+}
+@keyframes animBubbles {
+	0% {
+		transform: translateY(-10vh) scale(0);
+	}
+	100% {
+		transform: translateY(100vh) scale(1);
+	}
+}

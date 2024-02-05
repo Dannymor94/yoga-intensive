@@ -1,0 +1,200 @@
+.form {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include flex-colum();
+	flex-wrap: nowrap;
+	background-color: $pinkish;
+	border-radius: 8px;
+	padding: 8px 15px 8px 8px;
+	z-index: 99;
+	gap: 10px;
+	border: 2px solid $brown;
+	display: none;
+	box-shadow: 0 0 550px 5550px rgba(87, 76, 49, 0.6);
+	@media (max-width: 596px) {
+		width: 100vw;
+		height: 100vh;
+		top: 0%;
+		left: 0%;
+		transform: translate(0%, 0%);
+	}
+}
+
+.form__cross {
+	font-size: 50px;
+	font-weight: 600;
+	position: absolute;
+	right: -5%;
+	top: -15%;
+	color: $pinkish;
+	border-radius: 8px;
+	background-color: $turquoise;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	transform: rotate(45deg);
+	&:hover {
+		background-color: $pinkish;
+		color: $turquoise;
+		transition: 0.2s;
+		border: 1px solid $turquoise;
+		transition: 0.3s;
+		
+	}
+	
+	@media  (max-width: 1000px) {
+		right: 0%;
+		top: 50%;
+		transform: translate(50%,-50%)  rotate(45deg);
+	}
+	@media (max-width: 596px) {
+		left: 5%;
+		top: 5%;
+		transform: translate(0%,0%)  rotate(45deg);
+	}
+}
+.form__cross-item{
+	&:hover {
+		transform: rotate(45deg);
+		transition: 0.3s;
+	}
+}
+.form__text {
+	@include font();
+	font-size: 18px;
+	font-weight: 700;
+	margin: 4px 0;
+	text-align: left;
+}
+.form__field {
+	width: 90%;
+	height: 30px;
+	border: $turquoise 2px solid;
+	border-radius: 8px;
+	padding: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	color: $turquoise;
+	&:focus {
+		outline: none;
+		border: $turquoise 2px solid;
+		box-shadow: 0 0 2px 1px $turquoise;
+	}
+}
+.form__select {
+	width: 90%;
+	height: 50px;
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
+	border: $turquoise 2px solid;
+	border-radius: 8px;
+	padding: 4px 0;
+	color: $turquoise;
+	cursor: pointer;
+	&:focus {
+		outline: none;
+		border: $turquoise 2px solid;
+		box-shadow: 0 0 2px 1px $turquoise;
+	}
+}
+.form__option {
+	background: #fff;
+	color: $turquoise;
+	font-size: 18px;
+	font-weight: 600;
+	&:hover {
+	}
+}
+
+.form__wrap-checkbox {
+	@include font();
+}
+.form__checkbox {
+}
+.form__btn {
+	@include btn();
+}
+.form__inner-input {
+	@include flex-colum();
+	gap: 5px;
+	width: 90%;
+}
+.form__inner-input--whatsApp {
+	display: flex;
+	align-items: center;
+}
+#WhatsApp {
+	width: 70px;
+	height: 35px;
+}
+.form__error {
+	.form__field {
+		border: $orange 3px solid;
+	}
+}
+.form__error-label {
+	color: $orange;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+
+.form__modal {
+	width: 500px;
+	height: 300px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include flex-colum();
+	flex-wrap: nowrap;
+	background-color: $pinkish;
+	border-radius: 8px;
+	padding: 8px;
+	z-index: 999;
+	gap: 40px;
+	border: 2px solid $brown;
+	text-align: center;
+	display: none;
+	box-shadow: 0 0 50px 10px rgba(87, 76, 49, 0.6);
+	@media (max-width: 596px) {
+		width: 100vw;
+		height: 100vh;
+		top: 0%;
+		left: 0%;
+		transform: translate(0%, 0%);
+	}
+.form__modal-cross{
+	font-weight: bold;
+	font-size: 60px;
+	position: absolute;
+	top:2%;
+	right: 6%;
+
+	transform: rotate(45deg) ;
+	cursor: pointer;
+	&:hover{
+		transition: 1s;
+		transform:  rotate(135deg) ;
+	}
+}
+}
+.form__modal-text {
+	
+	font-weight: bold;
+	font-size: 22px;
+
+
+}
+.form__modal-text--quote {
+	font-style: italic;
+	span {
+	font-weight: bold	
+	};
+}

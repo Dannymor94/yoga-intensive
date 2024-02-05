@@ -1,0 +1,135 @@
+$orange: #f5800d;
+$yellow: rgb(242, 206, 77);
+$turquoise: #047e79;
+$khaki: #a69565;
+$pinkish: #cfc1af;
+$brown: rgb(87, 76, 49);
+
+$colorLink: $brown;
+$color-text: #574c31;
+$fz-subtitle: 36px;
+$fz-text: 24px;
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+@mixin flex-colum {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	gap: 20px;
+}
+@mixin V100 {
+	min-height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+@mixin title {
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 20px 0;
+	padding: 0 10px;
+}
+
+@mixin subtitle {
+	font-size: 22px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 20px 0;
+	padding: 0 10px;
+}
+
+@mixin font {
+	font-weight: normal;
+	font-size: 20px;
+	padding: 0 10px;
+}
+
+@mixin btn {
+	font-size: 18px;
+	font-weight: 700;
+	padding: 10px 20px;
+	border: none;
+	color: inherit;
+	background-color: transparent;
+	background-color: #047e79;
+	color: #cfc1af;
+	cursor: pointer;
+	border-radius: 20px;
+	text-transform: uppercase;
+	box-shadow: 1px 1px 2px 0px rgba(87, 76, 49, 0.5);
+	&:hover {
+		background-color: #cfc1af;
+		color: #047e79;
+		box-shadow: 0px 0px 8px 8px rgba(87, 76, 49, 0.3);
+		transition: 0.3s;
+	}
+}
+
+@mixin images {
+	max-width: 320px;
+	max-height: 320px;
+}
+
+body {
+	font-family: 'Lato', 'Roboto', sans-serif;
+	color: #574c31;
+	background-color: $pinkish;
+	overflow-x: hidden;
+}
+.main {
+	margin: 0 auto;
+}
+a {
+	text-decoration: none;
+	color: $colorLink;
+}
+section {
+	@include V100();
+	margin-bottom: 50px;
+}
+h2 {
+	@include subtitle();
+}
+@keyframes puls {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@import 'animation';
+@import 'header';
+@import 'section';
+@import 'place';
+@import 'teachers';
+@import 'calender';
+@import 'history';
+@import 'form';
+@import 'footer';
+@import 'slider';
+
+.active-flex {
+	display: flex;
+}
+.active-block {
+	display: block;
+}
+.hidden {
+	overflow: hidden !important;
+}
+

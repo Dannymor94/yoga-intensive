@@ -1,0 +1,21 @@
+.history{
+	@include flex-colum();
+}
+.history__text {
+	@include font();
+	margin: 20px;
+}
+.history__wrap-item {
+	display: flex;
+	flex-wrap: wrap;
+}
+.history__img-wrap {
+	@include flex-center;
+	gap: 40px;
+	padding: 15px;
+}
+.history__img {
+	max-width: 400px;
+	border-radius: 8px;
+	box-shadow: 0 0 8px 0px $brown;
+}

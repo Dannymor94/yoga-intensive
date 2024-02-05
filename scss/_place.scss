@@ -1,0 +1,25 @@
+.place__title {
+	@include title();
+}
+.place__text {
+	@include font();
+	text-align: center;
+	margin: 20px 0;
+}
+.place__wrap-item {
+	@include flex-center();
+	padding: 15px;
+}
+.place__img {
+	@include images();
+	border-radius: 8px;
+	&:hover {
+		scale: 1.2;
+	}
+	@media (max-width: 500px) {
+		max-width: 250px;
+		&:hover {
+			scale: 1;
+		}
+	}
+}

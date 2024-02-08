@@ -28,14 +28,3 @@ slider.forEach(function(item){
     })
   })
 });
-// Добавить слайдер на vw 992
-$(window).resize(function () {
-  if ($(window).width() > 992){
-    $('.history__img-wrap').removeClass('slider-line');
-    $('.history__icon-finger').addClass('hidden');
-  }
-  else if($(window).width() < 992){
-    $('.history__img-wrap').addClass('slider-line');
-    $('.history__icon-finger').removeClass('hidden');
-  }
-});

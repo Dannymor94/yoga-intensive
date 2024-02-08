@@ -59,6 +59,71 @@ h2 {
             transform: scale(1);
   }
 }
+.slider-wrap {
+  position: relative;
+}
+
+.slider-line {
+  width: 600px;
+  height: 500px;
+}
+.slider-line img {
+  width: 100%;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 5px 2px rgb(87, 76, 49);
+          box-shadow: 0 0 5px 2px rgb(87, 76, 49);
+}
+@media (max-width: 991px) {
+  .slider-line {
+    width: 400px;
+    height: 300px;
+  }
+}
+@media (max-width: 500px) {
+  .slider-line {
+    width: 300px;
+    height: 200px;
+  }
+}
+@media (max-width: 400px) {
+  .slider-line {
+    width: 280px;
+    height: 180px;
+  }
+}
+
+.slider-control {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 70px;
+  font-weight: bold;
+  color: rgb(87, 76, 49);
+  border-top: 3px solid rgb(242, 206, 77);
+  border-right: 3px solid rgb(242, 206, 77);
+}
+
+.control-wrap {
+  position: relative;
+  width: 400px;
+  height: 300px;
+}
+
+.slider-btn-prev {
+  top: 50%;
+  left: 0;
+  -webkit-transform: rotate(-135deg) translate(-50%, 50%);
+          transform: rotate(-135deg) translate(-50%, 50%);
+}
+
+.slider-btn-next {
+  top: 50%;
+  right: 0;
+  -webkit-transform: rotate(45deg) translate(-50%, 50%);
+          transform: rotate(45deg) translate(-50%, 50%);
+}
+
 @keyframes puls {
   0% {
     -webkit-transform: scale(1);
@@ -1096,13 +1161,6 @@ h2 {
   padding: 15px;
 }
 
-.history__img {
-  max-width: 400px;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 0 8px 0px rgb(87, 76, 49);
-          box-shadow: 0 0 8px 0px rgb(87, 76, 49);
-}
-
 .history__icon-finger {
   width: 30px;
   height: 30px;
@@ -1475,57 +1533,6 @@ h2 {
   padding: 0 10px;
   font-size: 16px;
   text-align: center;
-}
-
-.slider-wrap {
-  position: relative;
-}
-
-.slider-line {
-  width: 400px;
-  height: 300px;
-  border-radius: 8px;
-}
-.slider-line img {
-  width: 100%;
-}
-@media (max-width: 500px) {
-  .slider-line {
-    width: 300px;
-    height: 200px;
-  }
-}
-
-.slider-control {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  font-size: 70px;
-  font-weight: bold;
-  color: rgb(87, 76, 49);
-  border-top: 3px solid rgb(242, 206, 77);
-  border-right: 3px solid rgb(242, 206, 77);
-}
-
-.control-wrap {
-  position: relative;
-  width: 400px;
-  height: 300px;
-}
-
-.slider-btn-prev {
-  top: 50%;
-  left: 0;
-  -webkit-transform: rotate(-135deg) translate(-50%, 50%);
-          transform: rotate(-135deg) translate(-50%, 50%);
-}
-
-.slider-btn-next {
-  top: 50%;
-  right: 0;
-  -webkit-transform: rotate(45deg) translate(-50%, 50%);
-          transform: rotate(45deg) translate(-50%, 50%);
 }
 
 .active-flex {

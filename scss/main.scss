@@ -112,6 +112,7 @@ h2 {
 		transform: scale(1);
 	}
 }
+@import 'slider';
 @import 'animation';
 @import 'header';
 @import 'section';
@@ -122,7 +123,7 @@ h2 {
 @import 'history';
 @import 'form';
 @import 'footer';
-@import 'slider';
+
 
 .active-flex {
 	display: flex;
